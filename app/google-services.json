@@ -1,0 +1,51 @@
+{
+  "project_info": {
+    "project_id": "forher-3c260",
+    "project_number": "214056966639",
+    "name": "ForHer"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:214056966639:android:54db4ff0f6190cbb",
+        "client_id": "android:com.forher.forher",
+        "client_type": 1,
+        "android_client_info": {
+          "package_name": "com.forher.forher"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "214056966639-7fr8dcihal2kko2egg0227ooiqcjk1rm.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.forher.forher",
+            "certificate_hash": "8FF740275EB67D3BF933D5CAC10A46CD09341A15"
+          }
+        }
+      ],
+      "api_key": [],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "cloud_messaging_service": {
+          "status": 1,
+          "apns_config": []
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "google_signin_service": {
+          "status": 2
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "client_info": [],
+  "ARTIFACT_VERSION": "1"
+}

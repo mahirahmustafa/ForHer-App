@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="190dp" android:background="@drawable/profile"
+    android:adjustViewBounds="true"
+    android:scaleType="fitXY">
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:id="@+id/def_profile_id"
+        android:src="@drawable/default_profile_icon"
+        android:layout_marginLeft="50dp"
+        android:layout_centerVertical="true"
+        />
+</RelativeLayout>

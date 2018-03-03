@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:fitsSystemWindows="true"
+    tools:context="com.forher.forher.WelcomeActivity" android:orientation="vertical" android:id="@+id/welcome_rootid"
+    android:weightSum="5"
+    android:background="@color/weclome_bg">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="20dp"
+        android:layout_weight="2">
+        <ImageView
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:id="@+id/login_logo"
+            android:src="@drawable/fh_logo_00"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+           android:adjustViewBounds="true"
+                android:scaleType="fitXY" />
+        <com.facebook.login.widget.LoginButton
+            android:id="@+id/fb_login_button"
+            android:layout_width="162dp"
+            android:layout_height="45dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="5dp"
+            android:adjustViewBounds="true"
+            android:textSize="12sp"
+            android:paddingTop="12dp"
+            android:paddingBottom="10dp"/>
+
+        <com.google.android.gms.common.SignInButton
+            android:id="@+id/google_sign_in_button"
+            android:layout_width="170dp"
+            android:layout_height="45dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="5dp"/>
+    </LinearLayout>
+    <!--LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:weightSum="2">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/left_arrow"
+            android:gravity="right"
+            android:layout_weight="1"
+            android:text="@string/leftarrow"
+            android:textSize="25sp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/right_arrow"
+            android:gravity="left"
+            android:layout_weight="1"
+            android:text="@string/rightarrow"
+            android:textSize="25sp"/>
+    </LinearLayout-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="2">
+
+
+
+
+    <EditText
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:ems="10"
+        android:id="@+id/editText"
+        android:background="@color/white"
+        android:layout_gravity="center"
+        android:layout_margin="5dp"
+        android:padding="5dp"/>
+
+    <EditText
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:background="@color/white"
+        android:layout_gravity="center"
+        android:padding="5dp"
+        android:id="@+id/editText_pwd"
+        android:layout_margin="5dp"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        android:layout_gravity="center_horizontal"
+        android:padding="5dp"
+        android:id="@+id/custom_loginButton"
+        android:layout_margin="5dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:id="@+id/signup_link"
+            android:text="@string/signup_string"
+            android:layout_margin="5dp"/>
+    </LinearLayout>
+
+</LinearLayout>

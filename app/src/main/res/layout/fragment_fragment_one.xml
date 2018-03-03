@@ -1,0 +1,217 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    tools:context="com.forher.forher.FragmentOne"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:isScrollContainer="true"
+    tools:ignore="MissingPrefix">
+    <LinearLayout   android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:scrollbars="vertical">
+
+        <!-- TODO: Update blank fragment layout -->
+        <!--
+        <TextView android:layout_width="match_parent" android:layout_height="match_parent"
+            android:text="@string/hello_blank_fragment1" /> -->
+        <!--
+         <android.support.v4.view.ViewPager
+
+            android:id="@+id/main_page_slider"
+            android:layout_width="match_parent"
+            android:layout_height="220dp" />
+        -->
+        <cn.trinea.android.view.autoscrollviewpager.AutoScrollViewPager
+
+            android:id="@+id/main_page_slider"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/her_info_header"
+            android:text="SHE DESERVES"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:padding="5dp"
+            fontPath="fonts/Quicksand-Bold.otf"/>
+
+        <android.support.v7.widget.CardView android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:id="@+id/her_info_cardview"
+            android:layout_gravity="center_horizontal|bottom" card_view:cardCornerRadius="4dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="70dp"
+                        android:id="@+id/her_info_card_text"
+                        android:text="@string/icon_h_in_her"
+                        android:textColor="@color/weclome_bg"
+                        android:textSize="40sp"/>
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Hygiene"
+                            android:textStyle="bold"
+                            android:paddingLeft="10dp"
+                            fontPath="fonts/Quicksand-Bold.otf"/>
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="match_parent"
+                            android:text="@string/string_h"
+                            android:maxLines="400"
+                            android:layout_gravity="fill"
+                            android:scrollHorizontally="false"
+                            android:id="@+id/string_h_in_her"
+                            android:paddingLeft="10dp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+                <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/card_border"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="70dp"
+                        android:id="@+id/her_info_card_text_e"
+                        android:text="@string/icon_e_in_her"
+                        android:textColor="@color/weclome_bg"
+                        android:textSize="40sp"/>
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Empowerment"
+                            android:textStyle="bold"
+                            android:paddingLeft="10dp"
+                            fontPath="fonts/Quicksand-Bold.otf"/>
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="match_parent"
+                            android:text="@string/string_e"
+                            android:maxLines="200"
+                            android:layout_gravity="fill"
+                            android:scrollHorizontally="false"
+                            android:id="@+id/string_e_in_her"
+                            android:paddingLeft="10dp"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+                <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/card_border"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="70dp"
+                        android:id="@+id/her_info_card_text_r"
+                        android:text="@string/icon_r_in_her"
+                        android:textColor="@color/weclome_bg"
+                        android:textSize="40sp"/>
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Respect"
+                            android:textStyle="bold"
+                            android:paddingLeft="10dp"
+                            fontPath="fonts/Quicksand-Bold.otf"/>
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="match_parent"
+                            android:text="@string/string_r"
+                            android:maxLines="200"
+                            android:layout_gravity="fill"
+                            android:scrollHorizontally="false"
+                            android:id="@+id/string_r_in_her"
+                            android:paddingLeft="10dp"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="UPCOMING EVENTS"
+            android:layout_gravity="center"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:padding="5dp"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:id="@+id/upce_recycler_view"
+            android:layout_weight="2"
+            >
+
+        </android.support.v7.widget.RecyclerView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="RECENT EVENTS"
+            android:layout_gravity="center"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:padding="5dp"/>
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:id="@+id/recev_recycler_view"
+            android:layout_weight="2"
+            >
+
+        </android.support.v7.widget.RecyclerView>
+
+    </LinearLayout>
+
+</ScrollView>
+
+
+
+
+

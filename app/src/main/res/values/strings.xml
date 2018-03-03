@@ -1,0 +1,39 @@
+<resources>
+    <string name="app_name">ForHer</string>
+    <string name="action_settings">Settings</string>
+
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment1">Hello blank fragment</string>
+
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment2">Hello blank fragment</string>
+
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_welcome">ForHer</string>
+    <string name="WelComeScreen">welcome screen</string>
+    <string name="hello_slider_fragment">Slider Fragment</string>
+    <string name="loading">app loading</string>
+    <string name="facebook_app_id">495474093973863</string>
+     <string name="drawer_open">Drawer Open</string>
+    <string name="drawer_close">Drawer Close</string>
+    <string name="username_hint">abc@xyz.com</string>
+    <string name="password_hint">Password</string>
+     <string name="string_h">In a country where millions of women still do not use sanitary napkin,Out of ignorance and poverty, nearly 70% of women use old rags, increasing the risk of diseases, hygiene is our priority</string>
+    <string name="string_e">We strive for creation of an environment where women can make independent decisions on their personal development as well as shine as equals in society.</string>
+    <string name="string_r">In a country where millions of women still do not use sanitary napkin,Out of ignorance and poverty, nearly 70% of women use old rags, increasing the risk of diseases, hygiene is our priority.</string>
+    <string name="signup_string">New User?Signup today</string>
+    <string name="title_activity_signup">SignupActivity</string>
+    <string name="leftarrow">&#xf100;</string>
+    <string name="rightarrow">&#xf101;</string>
+    <string name="logout">&#xf08b;</string>
+    <string name="upc_event">&#xf024;</string>
+    <string name="fb_link_text">&#xf09a;</string>
+    <string name="gplus_link_text">&#xf0d4;</string>
+    <string name="twitter_link_text">&#xf099;</string>
+    <string name="linkedin_link_text">&#xf08c;</string>
+     <string name="profile_img">&#xf0c9;</string>
+    <string name="group_icon">&#xf0c0;</string>
+    <string name="title_activity_team">TeamActivity</string>
+
+</resources>
