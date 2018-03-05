@@ -102,7 +102,7 @@ public class FragmentFour extends Fragment {
             holder.authorText.setText(blogVector.elementAt(position).author);
             String x=blogVector.elementAt(position).image.toString();
             try{
-                Picasso.with(getActivity()).load("http://52.11.116.39/"+x).into((ImageView) holder.featuredImgView);
+                Picasso.with(getActivity()).load(getString(R.string.ip)+x).into((ImageView) holder.featuredImgView);
                 holder.featuredImgView.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
@@ -155,7 +155,7 @@ public class FragmentFour extends Fragment {
 
         RequestQueue requestQueue=VolleySingletonCall.getVolleyInstance().getRequestQueue();
 
-        StringRequest stringRequest=new StringRequest(Request.Method.GET, "http://52.11.116.39/api/v1.0/blog", new Response.Listener<String>() {
+        StringRequest stringRequest=new StringRequest(Request.Method.GET, getString(R.string.ip)+"/api/v1.0/blog", new Response.Listener<String>() {
 
             @Override
             public void onResponse(String response) {

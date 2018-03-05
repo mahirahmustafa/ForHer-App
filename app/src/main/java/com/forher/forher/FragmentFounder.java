@@ -39,7 +39,7 @@ public class FragmentFounder extends Fragment {
         //progressBar.setProgress(0);
         //progressBar.setVisibility(View.VISIBLE);
 
-        finalLink="http://52.11.116.39/founders";
+        finalLink=getString(R.string.ip)+"/founders";
         webViewBody=(WebView)v.findViewById(R.id.founder_webview);
         webViewBody.loadUrl(finalLink );
 

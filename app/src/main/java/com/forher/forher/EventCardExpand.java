@@ -61,12 +61,12 @@ public class EventCardExpand extends AppCompatActivity {
                 {
                     if(fromActivity.equalsIgnoreCase("SLIDER"))
                     {
-                        finalLink="http://52.11.116.39/blog/posts/readmode/b";
+                        finalLink=getString(R.string.ip)+"/blog/posts/readmode/b";
                         finalLink=finalLink+numberData;
                     }
                     else if(fromActivity.equalsIgnoreCase("EVENTS"))
                     {
-                        finalLink="http://52.11.116.39/blog/posts/readmode/b";
+                        finalLink=getString(R.string.ip)+"/blog/posts/readmode/b";
                         finalLink=finalLink+numberData;
                     }
                     else if(fromActivity.equalsIgnoreCase("TEAM"))
@@ -75,18 +75,18 @@ public class EventCardExpand extends AppCompatActivity {
                     }
                     else if(fromActivity.equalsIgnoreCase("PROFILE"))
                     {
-                        finalLink="http://52.11.116.39/blog/posts/readmode/b";
+                        finalLink=getString(R.string.ip)+"/blog/posts/readmode/b";
                     }
                     else if(fromActivity.equalsIgnoreCase("FAB")){
-                        finalLink="https://52.11.116.39/donate";
+                        finalLink=getString(R.string.ip)+"/donate";
                     }
                     else
                     {
-                        finalLink="http://52.11.116.39/blog/posts/readmode/b";
+                        finalLink=getString(R.string.ip)+"/blog/posts/readmode/b";
                     }
                 }
                 else{
-                    finalLink="http://52.11.116.39/blog/posts/readmode/b";
+                    finalLink=getString(R.string.ip)+"/blog/posts/readmode/b";
                 }
 
                 System.out.println("position is " + numberData);

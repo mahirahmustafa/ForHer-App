@@ -115,7 +115,7 @@ public  class MainPageSliderFragment extends Fragment {
         String slidertitle=null;
             if(pos==1)
             {
-               Picasso.with(getActivity()).load("http://52.11.116.39/assets/images/slider-2.jpg").into((ImageView) tv);
+               Picasso.with(getActivity()).load("http://34.216.167.184:8088/assets/images/slider-2.jpg").into((ImageView) tv);
                 slidertitle=pref.getString("SLIDERTITLE1", null);
                 ((TextView) textview).setText(slidertitle);
 
@@ -123,12 +123,12 @@ public  class MainPageSliderFragment extends Fragment {
             else if(pos==2)
             {
 
-               Picasso.with(getActivity()).load("http://52.11.116.39/assets/images/slider-3.jpg").into((ImageView) tv);
+               Picasso.with(getActivity()).load("http://34.216.167.184:8088/assets/images/slider-3.jpg").into((ImageView) tv);
                 slidertitle=pref.getString("SLIDERTITLE2", null);
                 ((TextView) textview).setText(slidertitle);
             }
         else{
-                Picasso.with(getActivity()).load("http://52.11.116.39/assets/images/slider-1.jpg").into((ImageView) tv);
+                Picasso.with(getActivity()).load("http://34.216.167.184:8088/assets/images/slider-1.jpg").into((ImageView) tv);
                 slidertitle=pref.getString("SLIDERTITLE0", null);
                 ((TextView) textview).setText(slidertitle);
             }
@@ -160,7 +160,7 @@ public  class MainPageSliderFragment extends Fragment {
         protected JSONObject doInBackground(Void... params) {
             final RequestFuture<JSONObject> futureRequest = RequestFuture.newFuture();
             mQueue = VolleySingletonCall.getVolleyInstance().getRequestQueue();
-            String url = "http://52.11.116.39/api/home";
+            String url = getString(R.string.ip)+"/api/home";
             final JsonObjectRequest jsonRequest = new JsonObjectRequest(Request.Method
                     .GET, url,
                     new JSONObject(), futureRequest, futureRequest);

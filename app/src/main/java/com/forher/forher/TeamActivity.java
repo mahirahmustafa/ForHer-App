@@ -32,6 +32,8 @@ import java.util.Vector;
 
 import dmax.dialog.SpotsDialog;
 
+import static com.forher.forher.R.*;
+
 public class TeamActivity extends AppCompatActivity {
 
     private RecyclerView founderRecyclerView;
@@ -62,13 +64,13 @@ public class TeamActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_team);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setContentView(layout.activity_team);
+        Toolbar toolbar = (Toolbar) findViewById(id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         //Addinf FounderDataset
          founderVector.add(founderDataset);
-        founderRecyclerView=(RecyclerView)findViewById(R.id.founder_recycler_view);
+        founderRecyclerView=(RecyclerView)findViewById(id.founder_recycler_view);
         founderViewLayoutManager=new org.solovyev.android.views.llm.LinearLayoutManager(getBaseContext(), LinearLayoutManager.VERTICAL, false);
         founderRecyclerView.setLayoutManager(founderViewLayoutManager);
         founderViewAdapter=new FounderAdapter(founderVector);
@@ -76,7 +78,7 @@ public class TeamActivity extends AppCompatActivity {
         founderRecyclerView.addItemDecoration(new DividerItemDecoration(getBaseContext(), null));
         //initialization of cofounder elements
         cofounderVector.add(cofounderDataset);
-        cofounderRecyclerView=(RecyclerView)findViewById(R.id.cofounder_recycler_view);
+        cofounderRecyclerView=(RecyclerView)findViewById(id.cofounder_recycler_view);
         cofounderViewLayoutManager=new org.solovyev.android.views.llm.LinearLayoutManager(getBaseContext(), LinearLayoutManager.VERTICAL, false);
         cofounderRecyclerView.setLayoutManager(cofounderViewLayoutManager);
         cofounderViewAdapter=new CoFounderAdapter(cofounderVector);
@@ -85,7 +87,7 @@ public class TeamActivity extends AppCompatActivity {
         //end of code
         //initialization of board elements
         boardVector.add(boardDataset);
-        boardRecyclerView=(RecyclerView)findViewById(R.id.board_recycler_view);
+        boardRecyclerView=(RecyclerView)findViewById(id.board_recycler_view);
         boardViewLayoutManager=new org.solovyev.android.views.llm.LinearLayoutManager(getBaseContext(), LinearLayoutManager.VERTICAL, false);
         boardRecyclerView.setLayoutManager(boardViewLayoutManager);
         boardViewAdapter=new BoardAdapter(boardVector);
@@ -93,10 +95,10 @@ public class TeamActivity extends AppCompatActivity {
         boardRecyclerView.addItemDecoration(new DividerItemDecoration(getBaseContext(), null));
         //end of code
         getDataFromServer();
-        cardProgressDialog=new SpotsDialog(this,R.style.Custom);
+        cardProgressDialog=new SpotsDialog(this, style.Custom);
         cardProgressDialog.show();
         //end of adding founder dataset
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        FloatingActionButton fab = (FloatingActionButton) findViewById(id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -133,7 +135,7 @@ public class TeamActivity extends AppCompatActivity {
 
         @Override
         public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-            View v= LayoutInflater.from(parent.getContext()).inflate(R.layout.founder_layout,parent,false);
+            View v= LayoutInflater.from(parent.getContext()).inflate(layout.founder_layout,parent,false);
             ViewHolder vh=new ViewHolder( v);
             return vh;
         }
@@ -144,7 +146,7 @@ public class TeamActivity extends AppCompatActivity {
             holder.nameLoc.setText(founderVector.elementAt(position).name);
             //holder.imageLoc.setTypeface(FontManager.getTypeface(getActivity(),FontManager.FONTAWESOME));
             holder.about_short_Loc.setText(founderVector.elementAt(position).about_short);
-            Picasso.with(getBaseContext()).load("http://52.11.116.39"+founderVector.elementAt(position).imagelink).into((ImageView) holder.imgView);
+            Picasso.with(getBaseContext()).load(getString(R.string.ip)+founderVector.elementAt(position).imagelink).into((ImageView) holder.imgView);
             holder.fb_link.setTypeface(FontManager.getTypeface(getBaseContext(), FontManager.FONTAWESOME));
             holder.fb_link.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -218,13 +220,13 @@ public class TeamActivity extends AppCompatActivity {
             public ImageView imgView;
             public ViewHolder(View itemView) {
                 super(itemView);
-                nameLoc=(TextView)itemView.findViewById(R.id.founder_name);
-                about_short_Loc=(TextView)itemView.findViewById(R.id.founder_about_short);
-                fb_link=(TextView)itemView.findViewById(R.id.fb_link);
-                gplus_link=(TextView)itemView.findViewById(R.id.gplus_link);
-                twitter_link=(TextView)itemView.findViewById(R.id.twitter_link);
-                linkedin_link=(TextView)itemView.findViewById(R.id.linkedin_link);
-                imgView=(ImageView)itemView.findViewById(R.id.profile_img);
+                nameLoc=(TextView)itemView.findViewById(id.founder_name);
+                about_short_Loc=(TextView)itemView.findViewById(id.founder_about_short);
+                fb_link=(TextView)itemView.findViewById(id.fb_link);
+                gplus_link=(TextView)itemView.findViewById(id.gplus_link);
+                twitter_link=(TextView)itemView.findViewById(id.twitter_link);
+                linkedin_link=(TextView)itemView.findViewById(id.linkedin_link);
+                imgView=(ImageView)itemView.findViewById(id.profile_img);
             }
         }
     }
@@ -234,7 +236,7 @@ public class TeamActivity extends AppCompatActivity {
 
         RequestQueue requestQueue=VolleySingletonCall.getVolleyInstance().getRequestQueue();
 
-        StringRequest stringRequest=new StringRequest(Request.Method.GET, "http://52.11.116.39/api/v1.0/team", new Response.Listener<String>() {
+        StringRequest stringRequest=new StringRequest(Request.Method.GET, getString(R.string.ip)+getString(string.team_api), new Response.Listener<String>() {
 
             @Override
             public void onResponse(String response) {
@@ -375,7 +377,7 @@ public class TeamActivity extends AppCompatActivity {
 
         @Override
         public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-            View v= LayoutInflater.from(parent.getContext()).inflate(R.layout.founder_layout,parent,false);
+            View v= LayoutInflater.from(parent.getContext()).inflate(layout.founder_layout,parent,false);
             ViewHolder vh=new ViewHolder( v);
             return vh;
         }
@@ -387,7 +389,7 @@ public class TeamActivity extends AppCompatActivity {
             //holder.imageLoc.setTypeface(FontManager.getTypeface(getActivity(),FontManager.FONTAWESOME));
             holder.about_short_Loc.setText(cofounderVector.elementAt(position).about_short);
             holder.fb_link.setTypeface(FontManager.getTypeface(getBaseContext(), FontManager.FONTAWESOME));
-            Picasso.with(getBaseContext()).load("http://52.11.116.39"+cofounderVector.elementAt(position).imagelink).into((ImageView) holder.imgView);
+            Picasso.with(getBaseContext()).load(getString(R.string.ip) + cofounderVector.elementAt(position).imagelink).into((ImageView) holder.imgView);
             holder.fb_link.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -460,13 +462,13 @@ public class TeamActivity extends AppCompatActivity {
             public ImageView imgView;
             public ViewHolder(View itemView) {
                 super(itemView);
-                nameLoc=(TextView)itemView.findViewById(R.id.founder_name);
-                about_short_Loc=(TextView)itemView.findViewById(R.id.founder_about_short);
-                fb_link=(TextView)itemView.findViewById(R.id.fb_link);
-                gplus_link=(TextView)itemView.findViewById(R.id.gplus_link);
-                twitter_link=(TextView)itemView.findViewById(R.id.twitter_link);
-                linkedin_link=(TextView)itemView.findViewById(R.id.linkedin_link);
-                imgView=(ImageView)itemView.findViewById(R.id.profile_img);
+                nameLoc=(TextView)itemView.findViewById(id.founder_name);
+                about_short_Loc=(TextView)itemView.findViewById(id.founder_about_short);
+                fb_link=(TextView)itemView.findViewById(id.fb_link);
+                gplus_link=(TextView)itemView.findViewById(id.gplus_link);
+                twitter_link=(TextView)itemView.findViewById(id.twitter_link);
+                linkedin_link=(TextView)itemView.findViewById(id.linkedin_link);
+                imgView=(ImageView)itemView.findViewById(id.profile_img);
             }
         }
     }
@@ -480,7 +482,7 @@ public class TeamActivity extends AppCompatActivity {
 
         @Override
         public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-            View v= LayoutInflater.from(parent.getContext()).inflate(R.layout.founder_layout,parent,false);
+            View v= LayoutInflater.from(parent.getContext()).inflate(layout.founder_layout,parent,false);
             ViewHolder vh=new ViewHolder( v);
             return vh;
         }
@@ -491,7 +493,7 @@ public class TeamActivity extends AppCompatActivity {
             holder.nameLoc.setText(boardVector.elementAt(position).name);
             //holder.imageLoc.setTypeface(FontManager.getTypeface(getActivity(),FontManager.FONTAWESOME));
             holder.about_short_Loc.setText(boardVector.elementAt(position).about_short);
-            Picasso.with(getBaseContext()).load("http://52.11.116.39"+boardVector.elementAt(position).imagelink).into((ImageView) holder.imgView);
+            Picasso.with(getBaseContext()).load(getString(R.string.ip)+boardVector.elementAt(position).imagelink).into((ImageView) holder.imgView);
             holder.fb_link.setTypeface(FontManager.getTypeface(getBaseContext(), FontManager.FONTAWESOME));
 
             holder.fb_link.setOnClickListener(new View.OnClickListener() {
@@ -568,13 +570,13 @@ public class TeamActivity extends AppCompatActivity {
             public ImageView imgView;
             public ViewHolder(View itemView) {
                 super(itemView);
-                nameLoc=(TextView)itemView.findViewById(R.id.founder_name);
-                about_short_Loc=(TextView)itemView.findViewById(R.id.founder_about_short);
-                fb_link=(TextView)itemView.findViewById(R.id.fb_link);
-                gplus_link=(TextView)itemView.findViewById(R.id.gplus_link);
-                twitter_link=(TextView)itemView.findViewById(R.id.twitter_link);
-                linkedin_link=(TextView)itemView.findViewById(R.id.linkedin_link);
-                imgView=(ImageView)itemView.findViewById(R.id.profile_img);
+                nameLoc=(TextView)itemView.findViewById(id.founder_name);
+                about_short_Loc=(TextView)itemView.findViewById(id.founder_about_short);
+                fb_link=(TextView)itemView.findViewById(id.fb_link);
+                gplus_link=(TextView)itemView.findViewById(id.gplus_link);
+                twitter_link=(TextView)itemView.findViewById(id.twitter_link);
+                linkedin_link=(TextView)itemView.findViewById(id.linkedin_link);
+                imgView=(ImageView)itemView.findViewById(id.profile_img);
             }
         }
     }

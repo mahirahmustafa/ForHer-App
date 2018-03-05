@@ -216,7 +216,7 @@ public class FragmentOne extends Fragment {
         final RequestFuture<JSONObject> futureRequest = RequestFuture.newFuture();
         RequestQueue requestQueue=VolleySingletonCall.getVolleyInstance().getRequestQueue();
 
-        StringRequest stringRequest=new StringRequest(Request.Method.GET, "http://52.11.116.39/api/v1.0/home", new Response.Listener<String>() {
+        StringRequest stringRequest=new StringRequest(Request.Method.GET, getString(R.string.ip)+"/api/v1.0/home", new Response.Listener<String>() {
 
             @Override
             public void onResponse(String response) {

@@ -112,7 +112,7 @@ public class FragmentThree extends Fragment {
 
         RequestQueue requestQueue=VolleySingletonCall.getVolleyInstance().getRequestQueue();
 
-        StringRequest stringRequest=new StringRequest(Request.Method.GET, "http://52.11.116.39/api/v1.0/team", new Response.Listener<String>() {
+        StringRequest stringRequest=new StringRequest(Request.Method.GET, getString(R.string.ip)+"/api/v1.0/team", new Response.Listener<String>() {
 
             @Override
             public void onResponse(String response) {
@@ -283,7 +283,7 @@ public class FragmentThree extends Fragment {
             //holder.imageLoc.setTypeface(FontManager.getTypeface(getActivity(),FontManager.FONTAWESOME));
             holder.about_short_Loc.setText(cofounderVector.elementAt(position).about_short);
             holder.fb_link.setTypeface(FontManager.getTypeface(getActivity(), FontManager.FONTAWESOME));
-            Picasso.with(getActivity()).load("http://52.11.116.39"+cofounderVector.elementAt(position).imagelink).into((ImageView) holder.imgView);
+            Picasso.with(getActivity()).load(getString(R.string.ip)+cofounderVector.elementAt(position).imagelink).into((ImageView) holder.imgView);
             holder.fb_link.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -387,7 +387,7 @@ public class FragmentThree extends Fragment {
             holder.nameLoc.setText(founderVector.elementAt(position).name);
             //holder.imageLoc.setTypeface(FontManager.getTypeface(getActivity(),FontManager.FONTAWESOME));
             holder.about_short_Loc.setText(founderVector.elementAt(position).about_short);
-            Picasso.with(getActivity()).load("http://52.11.116.39"+founderVector.elementAt(position).imagelink).into((ImageView) holder.imgView);
+            Picasso.with(getActivity()).load(getString(R.string.ip)+founderVector.elementAt(position).imagelink).into((ImageView) holder.imgView);
             holder.fb_link.setTypeface(FontManager.getTypeface(getActivity(), FontManager.FONTAWESOME));
             holder.fb_link.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -492,7 +492,7 @@ public class FragmentThree extends Fragment {
             holder.nameLoc.setText(boardVector.elementAt(position).name);
             //holder.imageLoc.setTypeface(FontManager.getTypeface(getActivity(),FontManager.FONTAWESOME));
             holder.about_short_Loc.setText(boardVector.elementAt(position).about_short);
-            Picasso.with(getActivity()).load("http://52.11.116.39"+boardVector.elementAt(position).imagelink).into((ImageView) holder.imgView);
+            Picasso.with(getActivity()).load(getString(R.string.ip)+boardVector.elementAt(position).imagelink).into((ImageView) holder.imgView);
             holder.fb_link.setTypeface(FontManager.getTypeface(getActivity(), FontManager.FONTAWESOME));
 
             holder.fb_link.setOnClickListener(new View.OnClickListener() {

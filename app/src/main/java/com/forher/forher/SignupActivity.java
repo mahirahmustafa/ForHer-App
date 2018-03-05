@@ -80,7 +80,7 @@ public class SignupActivity extends AppCompatActivity {
                 {
                     //send data toserver
                      RequestQueue requestQueue=VolleySingletonCall.getVolleyInstance().getRequestQueue();
-                    StringRequest stringRequest = new StringRequest(Request.Method.POST, "http://52.11.116.39/api/v1.0/signup",
+                    StringRequest stringRequest = new StringRequest(Request.Method.POST, getString(R.string.ip)+"/api/v1.0/signup",
                     new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {

@@ -35,5 +35,8 @@
      <string name="profile_img">&#xf0c9;</string>
     <string name="group_icon">&#xf0c0;</string>
     <string name="title_activity_team">TeamActivity</string>
+    <!--String names for apis -->
+    <string name="ip">http://52.11.116.39</string>
+    <string name="team_api">/api/v1.0/team</string>
 
 </resources>

@@ -122,7 +122,7 @@ public class WelcomeActivity extends AppCompatActivity implements GoogleApiClien
                 if(matchFound && cloginPwd.length()>5)
                 {
                     RequestQueue requestQueue=VolleySingletonCall.getVolleyInstance().getRequestQueue();
-                    StringRequest stringRequest = new StringRequest(Request.Method.POST, "http://52.11.116.39/api/v1.0/signin",
+                    StringRequest stringRequest = new StringRequest(Request.Method.POST, getString(R.string.ip)+"/api/v1.0/signin",
                     new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
